@@ -2,13 +2,14 @@
 *
 * Practicum one
 * 
-* Colorful Line
+* Moving Color
 * 
 * Nate Mulvaney
-* 9/7/2017
+* 9/20/2017
 * 
-* This sketch shows off a line that moves from side to side of the background. On the right side of the line, there will always be color. In actuality, there is a 
-* rectangle with noStoke() that contains the random color function. This gives the illusion of color on the right side of the line. 
+* This sketch has a moving rectangle on the left side of the screen that shrinks and grows depending on the Xpos variable. On the right
+* side of the rectangle is a series of random lines that range from black to white. These lines grow and recede as well depending on the 
+* Xpos variable. 
 
 *
 * 
@@ -39,7 +40,8 @@ frameRate(100);
  fill(random(255));
   line(Xpos, 0, Xpos, 300);
 }
-  
+// The direction variable is ind of like an on/off switch; if it is one, the rectangle grows and the lines recede, and if it is two, 
+// then the movement is towards the left. 
     if (Xpos==600){
      direction=2;
     }
