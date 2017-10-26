@@ -1,0 +1,24 @@
+int x=300;
+int y=x;
+
+void setup(){
+  size(600,600);
+}
+void draw(){
+  print(key);
+  if(key=='a'){
+    x--;
+  }
+  if(key=='d'){
+    x++;
+  }
+  if(key=='w'){
+    y--;
+  }
+  if(key== 's'){
+    y++;
+  }
+  noStroke();
+  fill(x, y, 100, 10);
+  ellipse(x,y, 20, 20);
+}
