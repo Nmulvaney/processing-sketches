@@ -1,5 +1,5 @@
 /* Nate Mulvaney
-   Intro to COding
+   Intro to Coding
    Dr. Van Nagy
    Due 11/9
    
