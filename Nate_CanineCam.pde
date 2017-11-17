@@ -11,9 +11,15 @@ void setup() {
 void draw() {
   image(cam, width/2, height/2);
   loadPixels();
-  for(int i; i>height; i++;){
-    colo
-}
+  loadPixels();
+  for(int i=0; i<width*height; i++){
+    color p= pixels[i];
+    float b= blue(p);
+    float g= green(p);
+    float r= red(p);
+    pixels[i]= color((r+g)/2, (r+g)/2, b);
+  }
+    updatePixels();
 
 void onCameraPreviewEvent()
 {
