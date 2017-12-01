@@ -1,3 +1,9 @@
+
+/* Nate Mulvaney
+   Dr. Van Nagy
+   Intro to Coding
+   */
+
 String explanation= "These are squares that are proportional to the Golden Ratio, or 1.618";
 float gr= 1.6188033;
 void setup(){
