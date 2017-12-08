@@ -7,6 +7,7 @@
    each of the seven games, and the bar graphs are for the total in that stat. 
    */
 
+
 String points= "Points Games 1-7";
 String assists= "Assists Games 1-7";
 String threePoint= "3P Fgs made Games 1-7";
@@ -22,9 +23,12 @@ String threew= " 94";
 String paxis= " 100";
 String aaxis= " 15";
 String threeaxis= " 10";
+
 void setup(){
   size(1000,600);
-} void draw(){
+} 
+
+void draw(){
   strokeWeight(7);
   line(100,50,100,500);
   line(100,500,900,500);
@@ -191,5 +195,6 @@ void setup(){
   text(yaxis, -300,-20);
   popMatrix();
   textSize(12);
+  
 }
   
