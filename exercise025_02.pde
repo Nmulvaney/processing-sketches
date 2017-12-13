@@ -6,7 +6,7 @@ float rx= map(mouseX, 0, width, -PI,PI);
   float ry= map(mouseY, 0, height,-PI, PI);
   rotateX(rx);
   rotateY(ry);
-  
+
 
  pushMatrix();
  translate(100,300);
