@@ -1,3 +1,11 @@
+/* 
+   Nate Mulvaney
+   Dr. Von Nagy
+   Intro to Coding
+   
+   THis sketch is a 3D model of a newton's cradle. It is a series of boxes, 
+   spheres, and lines. To rotate, you just move your mouse. 
+   */
 void setup(){
   size(400,400,P3D);
 } void draw(){
