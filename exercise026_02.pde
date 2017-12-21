@@ -1,4 +1,12 @@
-
+/* Nate Mulvaney
+   Intro to Coding
+   Dr. Von Nagy
+   
+   This sketch has two planets, earth and mars, which pop up if 
+   you press the first letter of the planet you want on the keyboard. 
+   This sketch simulates rotating around the planet as it orbits the sun at one point, so you are able to 
+   see both the light and the dark side of the planet
+   */
 PImage space;
 PShape globe;
 PShape globe2;
@@ -51,7 +59,7 @@ if(angle<200000){
   angle= angle+0.25;
 }
 rotateZ(radians(-23.5));
-spotLight(199,208,203, 40,60,30,1e,1,0,PI/2, 2);
+directionalLight(199,208,203, 40,60,0);
 shape(globe);
 scale(1/2);
 }
@@ -77,5 +85,7 @@ if(angle<200000){
 }
 
 rotateZ(radians(-25));
+//directionalLight(199,208,203, 40,60,0);
+
 shape(globe2);
 }
