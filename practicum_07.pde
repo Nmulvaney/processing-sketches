@@ -1,3 +1,15 @@
+/*
+   Nate Mulvaney
+   Dr. Von Nagy
+   Intro to Coding
+   Practicum 7
+   
+   This sketch is a finger and hand painting sketch that is imported from the LEAP Motion
+   device. By using hand rolls, pinches, and grabs, this effectively erases, changes weight
+   color, and draws across the screen. 
+   */
+
+
 import de.voidplus.leapmotion.*;
 
 // ======================================================
@@ -122,16 +134,21 @@ int roll= round(handRoll*10000);
       PVector fingerDirection  = finger.getDirection();
       float   fingerTime       = finger.getTimeVisible();
       println(handPinch);
+      //making the grab value 0-100
       int grab= round(handGrab*100);
+      //making the pinch value 0-100
  int pinch= round(handPinch*100);
  println(grab);
+ //if the pinch value is in the top 25 percent, then it leaves a colored trail for all fingers
   if((pinch<100)&&(pinch>75)){
         stroke(random(200), random(200), random(200));
         point(fingerPosition.x, fingerPosition.y);
       }
+      //the right hand clenched makes the weight of the lines larger
       if((grab>90)&&(hand.isRight()==true)){
         strokeWeight(20);
       }
+      //the left hand clenched makes the weight of the lines smaller
       if((grab>90)&&(hand.isLeft()==true)){
         strokeWeight(5);
       }
@@ -152,7 +169,7 @@ int roll= round(handRoll*10000);
         // System.out.println("thumb");
         break;
       case 1:
-  
+  //if the hand rolls to a certain degree, it resets the background
       if((roll<9000)&&(roll<-9000)){
       
       background(255);
@@ -163,10 +180,7 @@ int roll= round(handRoll*10000);
        stroke(0);
        point(fingerPosition.x, fingerPosition.y);
       }
-      if((pinch>200)&&(pinch<-200)){
-        stroke(random(100), random(100), random(100));
-        point(fingerPosition.x, fingerPosition.y);
-      }
+    
         break;
       case 2:
         // System.out.println("middle");
