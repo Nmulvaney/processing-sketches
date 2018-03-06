@@ -1,39 +1,42 @@
-/*  Nate Mulvaney
-    Dr. von Nagy
-    Intro to Coding
-    3/4/18
-    
-    This sketch shows tries to resemble water when there is a ripple using noise. 
-    */
+/* Nate Mulvaney
+   Dr. von Nagy
+   Intro to Coding
+   
+   This sketch is a sketch that uses the random function to make a random gray screen. 
+   If you hold the 1 key, then the amount used will increase, and if you hold the 0 key,
+   the opposite happens and that amount is printed at the bottom. 
+   */
 
-float xnoise = 0.0;
-float ynoise = 0.0;
-float inc = 0.04;
-int disc= 2;
+float xnoise =0.0;
+float ynoise =0.0;
+float amount= 0.1;
+void setup(){
 
-
-void setup() {
-  size(400,400);
+  size(800,400);
   noSmooth();
-  noFill();
-  frameRate(10000);
-  noiseSeed(8);
 }
-
-void draw() {
-translate(width/2, height/2);
-  //creating the disc
-  if(disc<600){
-    disc++;
-  }
-      float gray = noise(xnoise, ynoise) * 180;
-      //makes the value random, scales it between 0-180
+void draw(){;
+//changing the amount
+ if((keyPressed==true)&&(key=='1')){
+    amount= amount+0.005;
+ }
+ 
+ if((keyPressed==true)&&(key=='0')){
+   amount= amount-0.005;
+ }
+ //showing the amount
+ println(amount);
+  background(0);
+  for(int y=0;y<height;y++){
+    for(int x=0;x<width;x++){
+      //making the gray color itself
+      float gray= noise(xnoise, ynoise)*255;
       stroke(gray);
-      xnoise = xnoise + inc;
-      ynoise= ynoise+inc;
-     // changes the stroke of the growing disc
-    ellipse(0,0,disc,disc);
-
-    
-  
+      point(x,y);
+      xnoise= xnoise+amount;
+    }
+    //resets the value so it doesn't go crazy
+    xnoise=0;
+    ynoise= ynoise+amount;
+  }
 }
