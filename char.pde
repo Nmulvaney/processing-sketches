@@ -60,7 +60,7 @@ class You {
      
    
          // println(P,tarX, tarY, ang);
-         println(YOU.x,Xpre,YOU.y,Ypre);
+       //  println(YOU.x,Xpre,YOU.y,Ypre);
           stroke(0,255,0);
           line(YOU.x,YOU.y,tarX,tarY);
           dirX = sin(ang) * 10;
