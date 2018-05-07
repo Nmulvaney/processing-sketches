@@ -1,5 +1,5 @@
 
-class You {
+class PreYou {
   
   float Xpre ;
   float Ypre;
@@ -16,40 +16,43 @@ class You {
   ArrayList<float[]> trail = new ArrayList();
   // for trail
   character YOU;
-  You () {
+  PreYou () {
     YOU = new character(200,200,10);
     ang = atan2(YOU.x-250,YOU.y-250);
+    
     //starting point
-    for (int i = 0; 50 > i; i++) {
-      float[] a = {0,0};
-      trail.add(a);
-    }
+    //for (int i = 0; 50 > i; i++) {
+    //  float[] a = {0,0};
+    //  trail.add(a);
+    //}
     // making the trail, using arrayLists
   }
   void run(map MAP) {//Avalible functions, part allowed to change
-   this.calc();
+   //this.calc();
+   //snake.display(YOU.x, YOU.y);
     ArrayList<float[]> info = MAP.infoSight(YOU).get(0);
     ArrayList<float[]> info2 = MAP.infoSight(YOU).get(1);
     
-    for (int i = 0; trail.size() > i; i++) {
+    
+   // for (int i = 0; trail.size() > i; i++) {
      
-      if ( dist(tarX,tarY,YOU.x,YOU.y) <= 50) {
-      colorMode(HSB);
-      //rainbow fill
-      fill(C,255,255);
-      stroke(C,255,255);
-      C = C + 5;
-      C %= 255;
-      } else { 
-        invis= get(round(trail.get(i)[0]),round(trail.get(i)[1]));
-        //invisible fill
-      fill(invis);
-      stroke(invis);
+   //   if ( dist(tarX,tarY,YOU.x,YOU.y) <= 50) {
+   //   colorMode(HSB);
+   //   //rainbow fill
+   //   fill(C,255,255);
+   //   stroke(C,255,255);
+   //   C = C + 5;
+   //   C %= 255;
+   //   } else { 
+   //     invis= get(round(trail.get(i)[0]),round(trail.get(i)[1]));
+   //     //invisible fill
+   //   fill(invis);
+   //   stroke(invis);
         
-      }
-      ellipse(trail.get(i)[0],trail.get(i)[1],10,10);
-      //trail itself
-    }
+   //   }
+   //   ellipse(trail.get(i)[0],trail.get(i)[1],10,10);
+   //   //trail itself
+   // }
     float[] curpos = {YOU.x,YOU.y};
     trail.add(curpos);
     trail.remove(0);
