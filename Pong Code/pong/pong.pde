@@ -88,7 +88,15 @@ background(100);
  int roundVal= round(ballPos.y);
  
 
-boxHeight=mouseY; 
+if(key==CODED){
+if(keyPressed==true && keyCode==UP){
+boxHeight=boxHeight-3;
+}
+}
+if(keyPressed==true && keyCode==UP){
+boxHeight=boxHeight-3;
+}
+}
  
   if(boxHeight>(height-40)){
     boxHeight= (height-40);
