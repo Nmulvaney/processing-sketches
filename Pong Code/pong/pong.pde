@@ -93,8 +93,8 @@ if(keyPressed==true && keyCode==UP){
 boxHeight=boxHeight-3;
 }
 }
-if(keyPressed==true && keyCode==UP){
-boxHeight=boxHeight-3;
+if(keyPressed==true && keyCode==DOWN){
+boxHeight=boxHeight+3;
 }
 }
  
