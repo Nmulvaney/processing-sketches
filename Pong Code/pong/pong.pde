@@ -89,13 +89,12 @@ background(100);
  
 
 if(key==CODED){
-if(keyPressed==true && keyCode==UP){
-boxHeight=boxHeight-3;
-}
-}
-if(keyPressed==true && keyCode==DOWN){
-boxHeight=boxHeight+3;
-}
+  if(keyPressed==true&&keyCode==UP){
+    boxHeight=boxHeight-6;
+  }if(keyPressed==true&&keyCode==DOWN){
+    boxHeight= boxHeight+6;
+    
+  }
 }
  
   if(boxHeight>(height-40)){
